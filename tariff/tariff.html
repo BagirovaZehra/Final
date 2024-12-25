@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tariflər</title>
+    <link rel="icon" type="image/x-icon" href="./photo/freepik-gradient-news-group-logo-20241209092733D0hM-removebg-preview.png">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="./tariff.css">
+</head>
+<body>
+   <header>
+    <div class="modal-overlay"></div>
+    <div class="access-modul">
+        <div class="access-main-modul">
+            <button class="close-btn" id="close-modal">X</button>
+            <h2>Qeydiyyat</h2>
+            <form>
+                <label for="mobile">Mobil nömrə</label>
+                <input type="text" class="mobile"  placeholder="+994 (16) ___ __ __" maxlength="19" id="mobile">
+                <br>
+                <label for="access-name">Adınız:</label>
+                <input id="access-name" type="text">
+                <br>
+                <label for="access-surname">Soyadınız:</label>
+                <input id="access-surname" type="text">
+                <br>
+                <label for="access-email">Emailiniz:</label>
+                <input id="access-email" type="email">
+                <br>
+                <button type="submit">Təsdiqlə</button>
+            </form>
+        </div>
+    </div>
+    <div class="header-wrapper">
+        <div class="header-menu">
+            <div class="logo">
+                <img src="./photo/freepik-gradient-news-group-logo-20241209092733D0hM-removebg-preview.png" alt="img">
+            </div>
+            <button class="menu-toggle" aria-label="Open Menu">
+                ☰
+              </button>
+            <div class="menu-wrapper">
+                <button class="menu-toggle" aria-label="Open Menu">
+                    ☰
+                  </button>
+                <ul class="navbar">
+                    <li class="nav-item"><a href="../index.html">Ana səhifə</a></li>
+                    <li class="nav-item"><a href="../about/about.html">Haqqımızda</a></li>
+                    <li class="nav-item"><a href="#">Tariflər</a></li>
+                    <li class="nav-item"><a href="../application/application.html">Xidmətlər</a></li>
+                    <li class="connect"><a href="../connect/connect.html">Əlaqə</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="overlay"></div>
+        <div class="slideshow">
+            <div class="slide">
+                <div>
+                <h2>Tariflər</h2>
+                <p>Hər kəs üçün bir tarif: Rahatlıq, sürət və sərfəli seçimlər!</p>
+                <button class="slide-tariff">Tariflər</button>
+            </div>
+            <img src="./photo/young-couple-congratulating-themselves-success.png" alt="img">
+            </div>
+            <div class="slide">
+                <div>
+                <h2>Internet paketləri</h2>
+                <p>İnternetiniz sizin qədər sürətli və limitsiz!</p>
+                <button class="slide-internet">Internet paketləri</button>
+            </div>
+            <img class="slide-woman" src="./photo/rb_61535.png" alt="img">
+            </div>
+        </div>
+    </div>
+   </header>
+   <main>
+    <section class="tariff-packets">
+        <div class="tariff-packets-title">
+            <h2>Tariflər</h2>
+            <div class="options">
+                <div class="tariff-select">
+                    <span>Qiymət</span>
+                    <div>
+                        <p>Artan</p>
+                        <img src="./photo/top-arrow.svg" alt="img">
+                    </div>
+                </div>
+                <ul class="tariff-option">
+                    <li>Artan</li>
+                    <li>Azalan</li>
+                </ul>
+            </div>
+        </div>
+        <div class="slider-container">
+            <div class="tariff-cards slider">      
+            <div class="tariff-card">
+                <div class="img-card">
+                    <h4 class="tariff-title">UltraPlus</h4>
+                </div>
+                <div class="card-main">
+                    <div class="call">
+                        <img class="card-icon" src="./photo/call.svg" alt="img">
+                        <p>Ölkədaxili zəng: <span class="first1">300</span>dəq</p>
+                    </div>
+                    <div class="internet">
+                        <img src="./photo/internet.svg" alt="img">
+                        <p>İnternet: <span class="first2">3</span>GB</p>
+                    </div>
+                    <div class="limitless">
+                        <img src="./photo/whatsapp.svg" alt="img">
+                        <p>Limitsiz Yazışma</p>
+                    </div>
+                    <div class="join">
+                        <p>Qoşulmaq üçün UP yazıb 216-ya göndərin</p> 
+                        <h3 class="tariff-cost"><span>10</span>m</h3>                   
+                    </div>
+                </div>
+            </div>
+            <div class="tariff-card">
+                <div class="img-card">
+                    <h4 class="tariff-title">Tələbə Paketi</h4>
+                </div>
+                <div class="card-main">
+                    <div class="call">
+                        <img class="card-icon" src="./photo/call.svg" alt="img">
+                        <p>Ölkədaxili zəng: <span class="second1">100</span>dəq</p>
+                    </div>
+                    <div class="internet">
+                        <img src="./photo/internet.svg" alt="img">
+                        <p>İnternet: <span class="second2">21</span>GB</p>
+                    </div>
+                    <div class="limitless">
+                        <img src="./photo/whatsapp.svg" alt="img">
+                        <p>Limitsiz internet</p>
+                    </div>
+                    <div class="join">
+                        <p>Qoşulmaq üçün *TP yazıb 216-ya göndərin</p>
+                        <h3 class="tariff-cost"><span>8</span>m</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="tariff-card">
+                <div class="img-card">
+                    <h4 class="tariff-title">AktivGənc</h4>
+                </div>
+                <div class="card-main">
+                    <div class="call">
+                        <img class="card-icon" src="./photo/call.svg" alt="img">
+                        <p>Ölkədaxili zəng: <span class="third1">200</span>dəq</p>
+                    </div>
+                    <div class="internet">
+                        <img src="./photo/internet.svg" alt="img">
+                        <p>İnternet: <span class="third2">10</span>GB</p>
+                    </div>
+                    <div class="limitless">
+                        <img src="./photo/whatsapp.svg" alt="img">
+                        <p>Limitsiz yazışma</p>
+                    </div>
+                    <div class="join">
+                        <p>Qoşulmaq üçün *12 yazıb 216-ya göndərin</p>
+                        <h3 class="tariff-cost"><span>15</span>m</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="tariff-card">
+                <div class="img-card">
+                    <h4 class="tariff-title">AiləPaketi</h4>
+                </div>
+                <div class="card-main">
+                    <div class="call">
+                        <img class="card-icon" src="./photo/call.svg" alt="img">
+                        <p>Ölkədaxili zəng: <span class="fourth1">600</span>dəq</p>
+                    </div>
+                    <div class="internet">
+                        <img src="./photo/internet.svg" alt="img">
+                        <p>İnternet: <span class="fourth2">25</span>GB</p>
+                    </div>
+                    <div class="limitless">
+                        <img src="./photo/whatsapp.svg" alt="img">
+                        <p>Limitsiz yazışma</p>
+                    </div>
+                    <div class="join">
+                        <p>Qoşulmaq üçün *31 yazıb 216-ya göndərin</p>
+                        <h3 class="tariff-cost"><span>25</span>m</h3>
+                    </div>
+                </div>
+            </div>   
+            <div class="tariff-card">
+                <div class="img-card">
+                    <h4 class="tariff-title">ZetaPro</h4>
+                </div>
+                <div class="card-main">
+                    <div class="call">
+                        <img class="card-icon" src="./photo/call.svg" alt="img">
+                        <p>Ölkədaxili zəng: Limitsiz zəng</p>
+                    </div>
+                    <div class="internet">
+                        <img src="./photo/internet.svg" alt="img">
+                        <p>İnternet: <span class="fourth2">50</span>GB</p>
+                    </div>
+                    <div class="limitless">
+                        <img src="./photo/whatsapp.svg" alt="img">
+                        <p>Limitsiz yazışma</p>
+                    </div>
+                    <div class="join">
+                        <p>Qoşulmaq üçün ZP yazıb 216-ya göndərin</p>
+                        <h3 class="tariff-cost"><span>35</span>m</h3>
+                    </div>
+                </div>
+            </div>   
+            <div class="tariff-card">
+                <div class="img-card">
+                    <h4 class="tariff-title">KomboMax</h4>
+                </div>
+                <div class="card-main">
+                    <div class="call">
+                        <img class="card-icon" src="./photo/call.svg" alt="img">
+                        <p>Ölkədaxili zəng: <span class="fourth1">500</span>dəq</p>
+                    </div>
+                    <div class="internet">
+                        <img src="./photo/internet.svg" alt="img">
+                        <p>İnternet: <span class="fourth2">15</span>GB</p>
+                    </div>
+                    <div class="limitless">
+                        <img src="./photo/whatsapp.svg" alt="img">
+                        <p>Limitsiz sosial şəbəkə </p>
+                    </div>
+                    <div class="join">
+                        <p>Qoşulmaq üçün *5A yazıb 216-ya göndərin</p>
+                        <h3 class="tariff-cost"><span>22</span>m</h3>
+                    </div>
+                </div>
+            </div>   
+            <div class="tariff-card">
+                <div class="img-card">
+                    <h4 class="tariff-title">ZetaStart</h4>
+                </div>
+                <div class="card-main">
+                    <div class="call">
+                        <img class="card-icon" src="./photo/call.svg" alt="img">
+                        <p>Ölkədaxili zəng: <span class="fourth1">100</span>dəq</p>
+                    </div>
+                    <div class="internet">
+                        <img src="./photo/internet.svg" alt="img">
+                        <p>İnternet: <span class="fourth2">5</span>GB</p>
+                    </div>
+                    <div class="limitless">
+                        <img src="./photo/whatsapp.svg" alt="img">
+                        <p>Limitsiz sosial şəbəkə </p>
+                    </div>
+                    <div class="join">
+                        <p>Qoşulmaq üçün *Z+ yazıb 216-ya göndərin</p>
+                        <h3 class="tariff-cost"><span>8</span>m</h3>
+                    </div>
+                </div>
+            </div>   
+            <div class="tariff-card">
+                <div class="img-card">
+                    <h4 class="tariff-title">TurboNet</h4>
+                </div>
+                <div class="card-main">
+                    <div class="call">
+                        <img class="card-icon" src="./photo/call.svg" alt="img">
+                        <p>Ölkədaxili zəng: <span class="fourth1">500</span>dəq</p>
+                    </div>
+                    <div class="internet">
+                        <img src="./photo/internet.svg" alt="img">
+                        <p>İnternet: <span class="fourth2">100</span>GB</p>
+                    </div>
+                    <div class="limitless">
+                        <img src="./photo/whatsapp.svg" alt="img">
+                        <p>Limitsiz yazışma </p>
+                    </div>
+                    <div class="join">
+                        <p>Qoşulmaq üçün *T+ yazıb 216-ya göndərin</p>
+                        <h3 class="tariff-cost"><span>27</span>m</h3>
+                    </div>
+                </div>
+            </div>   
+        </div>
+    </div>
+    </section>
+    <section class="graph">
+        <div class="graph-wrapper-container">
+            <h2>Aylıq İnternet İstifadəsi</h2>
+            <h3>Həftəlik internet istifadənizi (GB ilə) daxil edin:</h3>
+            <input type="text" class="weeklyUsage" placeholder="İstifadəni GB ilə daxil edin">
+            <button class="addWeeklyUsageButton">Həftəlik İstifadə Əlavə Et</button>
+    
+            <h3>Ümumi Aylıq İstifadə: <span class="totalUsage">0</span> GB</h3>
+            <h3>Tövsiyə Olunan Tarif: <span class="recommendedTariff">-</span></h3>
+    
+            <div class="graph-container">
+                <canvas class="usageChart"></canvas>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="internet-packets">
+        <div class="tariff-packets-title">
+            <h2>İnternet paketləri</h2>
+            <div class="options">
+                <div class="tariff-select">
+                    <span>Qiymət</span>
+                    <div>
+                        <p>Artan</p>
+                        <img src="./photo/top-arrow.svg" alt="img">
+                    </div>
+                </div>
+                <ul class="tariff-option">
+                    <li>Artan</li>
+                    <li>Azalan</li>
+                </ul>
+            </div>
+        </div>
+        <div class="internet-options">
+            <button>Günlük</button>
+            <button>Aylıq</button>
+            <button>Limitsiz</button>
+        </div>
+        <div class="slider-container">
+            <div class="tariff-cards slider">      
+            <div class="tariff-card">
+                <div class="img-card">
+                    <h4 class="tariff-title">1GB</h4>
+                    <div class="use-time">
+                        <p>İstifadə müddəti: 1 gün</p> 
+                    </div>    
+                </div>
+                <div class="card-main">
+                    <div class="call">
+                        <img class="card-icon" src="./photo/video.svg" alt="img">
+                        <p>Video zəng: <span class="first1">1.5</span>saat</p>
+                    </div>
+                    <div class="internet">
+                        <img src="./photo/internet.svg" alt="img">
+                        <p>İnternet: <span class="first2">5</span>saat</p>
+                    </div>
+                    <div class="limitless">
+                        <img src="./photo/whatsapp.svg" alt="img">
+                        <p> 5 saat Limitsiz Yazışma</p>
+                    </div>
+                    <div class="join">
+                        <p>Qoşulmaq üçün *2 yazıb 216-ya göndərin</p> 
+                        <h3 class="tariff-cost"><span>2.5</span>m</h3>                   
+                    </div>
+                </div>
+            </div> 
+            <div class="tariff-card">
+                <div class="img-card">
+                    <h4 class="tariff-title">500MB</h4>
+                    <div class="use-time">
+                        <p>İstifadə müddəti: 1 gün</p> 
+                    </div>    
+                </div>
+                <div class="card-main">
+                    <div class="call">
+                        <img class="card-icon" src="./photo/video.svg" alt="img">
+                        <p>Video zəng: <span class="first1">1</span>saat</p>
+                    </div>
+                    <div class="internet">
+                        <img src="./photo/internet.svg" alt="img">
+                        <p>İnternet: <span class="first2">2</span>saat</p>
+                    </div>
+                    <div class="limitless">
+                        <img src="./photo/whatsapp.svg" alt="img">
+                        <p> 1 saat Limitsiz Yazışma</p>
+                    </div>
+                    <div class="join">
+                        <p>Qoşulmaq üçün *5 yazıb 216-ya göndərin</p> 
+                        <h3 class="tariff-cost"><span>1</span>m</h3>                   
+                    </div>
+                </div>
+            </div> 
+            <div class="tariff-card">
+                <div class="img-card">
+                    <h4 class="tariff-title">200MB</h4>
+                    <div class="use-time">
+                        <p>İstifadə müddəti: 1 gün</p> 
+                    </div>    
+                </div>
+                <div class="card-main">
+                    <div class="call">
+                        <img class="card-icon" src="./photo/video.svg" alt="img">
+                        <p>Video zəng: <span class="first1">0.5</span>saat</p>
+                    </div>
+                    <div class="internet">
+                        <img src="./photo/internet.svg" alt="img">
+                        <p>İnternet: <span class="first2">1</span>saat</p>
+                    </div>
+                    <div class="limitless">
+                        <img src="./photo/whatsapp.svg" alt="img">
+                        <p> 1 saat Limitsiz Yazışma</p>
+                    </div>
+                    <div class="join">
+                        <p>Qoşulmaq üçün *3 yazıb 216-ya göndərin</p> 
+                        <h3 class="tariff-cost"><span>2</span>m</h3>                   
+                    </div>
+                </div>
+            </div>  
+            <div class="tariff-card">
+                <div class="img-card">
+                    <h4 class="tariff-title">10GB</h4>
+                    <div class="use-time">
+                        <p>İstifadə müddəti: 30 gün</p> 
+                    </div>    
+                </div>
+                <div class="card-main">
+                    <div class="call">
+                        <img class="card-icon" src="./photo/video.svg" alt="img">
+                        <p>Video zəng: <span class="first1">2.5</span>saat</p>
+                    </div>
+                    <div class="internet">
+                        <img src="./photo/internet.svg" alt="img">
+                        <p>İnternet: <span class="first2">2</span>saat</p>
+                    </div>
+                    <div class="limitless">
+                        <img src="./photo/whatsapp.svg" alt="img">
+                        <p>Limitsiz Yazışma</p>
+                    </div>
+                    <div class="join">
+                        <p>Qoşulmaq üçün 10 yazıb 216-ya göndərin</p> 
+                        <h3 class="tariff-cost"><span>20</span>m</h3>                   
+                    </div>
+                </div>
+            </div>  
+            <div class="tariff-card">
+                <div class="img-card">
+                    <h4 class="tariff-title">1.5GB</h4>
+                    <div class="use-time">
+                        <p>İstifadə müddəti: 30 gün</p> 
+                    </div>    
+                </div>
+                <div class="card-main">
+                    <div class="call">
+                        <img class="card-icon" src="./photo/video.svg" alt="img">
+                        <p>Video zəng: <span class="first1">2.5</span>saat</p>
+                    </div>
+                    <div class="internet">
+                        <img src="./photo/internet.svg" alt="img">
+                        <p>İnternet: <span class="first2">2</span>saat</p>
+                    </div>
+                    <div class="limitless">
+                        <img src="./photo/whatsapp.svg" alt="img">
+                        <p>Limitsiz Yazışma</p>
+                    </div>
+                    <div class="join">
+                        <p>Qoşulmaq üçün *10 yazıb 216-ya göndərin</p> 
+                        <h3 class="tariff-cost"><span>6</span>m</h3>                   
+                    </div>
+                </div>
+            </div>  
+            <div class="tariff-card">
+                <div class="img-card">
+                    <h4 class="tariff-title">50GB</h4>
+                    <div class="use-time">
+                        <p>İstifadə müddəti: 30 gün</p> 
+                    </div>    
+                </div>
+                <div class="card-main">
+                    <div class="call">
+                        <img class="card-icon" src="./photo/video.svg" alt="img">
+                        <p>Video zəng: <span class="first1">2.5</span>saat</p>
+                    </div>
+                    <div class="internet">
+                        <img src="./photo/internet.svg" alt="img">
+                        <p>İnternet: <span class="first2">3</span>saat</p>
+                    </div>
+                    <div class="limitless">
+                        <img src="./photo/whatsapp.svg" alt="img">
+                        <p>Limitsiz Yazışma</p>
+                    </div>
+                    <div class="join">
+                        <p>Qoşulmaq üçün 50 yazıb 216-ya göndərin</p> 
+                        <h3 class="tariff-cost"><span>35</span>m</h3>                   
+                    </div>
+                </div>
+            </div>  
+            <div class="tariff-card">
+                <div class="img-card">
+                    <h4 class="tariff-title">100GB</h4>
+                    <div class="use-time">
+                        <p>İstifadə müddəti: 30 gün</p> 
+                    </div>    
+                </div>
+                <div class="card-main">
+                    <div class="call">
+                        <img class="card-icon" src="./photo/video.svg" alt="img">
+                        <p>Video zəng: <span class="first1">5</span>saat</p>
+                    </div>
+                    <div class="internet">
+                        <img src="./photo/internet.svg" alt="img">
+                        <p>İnternet: <span class="first2">5</span>saat</p>
+                    </div>
+                    <div class="limitless">
+                        <img src="./photo/whatsapp.svg" alt="img">
+                        <p>Limitsiz Yazışma</p>
+                    </div>
+                    <div class="join">
+                        <p>Qoşulmaq üçün 100 yazıb 216-ya göndərin</p> 
+                        <h3 class="tariff-cost"><span>50</span>m</h3>                   
+                    </div>
+                </div>
+            </div>  
+            <div class="tariff-card">
+                <div class="img-card">
+                    <h4 class="tariff-title">1GB</h4>
+                    <div class="use-time">
+                        <p>İstifadə müddəti: 30 gün</p> 
+                    </div>    
+                </div>
+                <div class="card-main">
+                    <div class="call">
+                        <img class="card-icon" src="./photo/video.svg" alt="img">
+                        <p>Video zəng: <span class="first1">1</span>saat</p>
+                    </div>
+                    <div class="internet">
+                        <img src="./photo/internet.svg" alt="img">
+                        <p>İnternet: <span class="first2">1</span>saat</p>
+                    </div>
+                    <div class="limitless">
+                        <img src="./photo/whatsapp.svg" alt="img">
+                        <p>Limitsiz Yazışma</p>
+                    </div>
+                    <div class="join">
+                        <p>Qoşulmaq üçün #1 yazıb 216-ya göndərin</p> 
+                        <h3 class="tariff-cost"><span>5</span>m</h3>                   
+                    </div>
+                </div>
+            </div>  
+            <div class="tariff-card">
+                <div class="img-card">
+                    <h4 class="tariff-title">Limitsiz</h4>
+                    <div class="use-time">
+                        <p>İstifadə müddəti: 5 saat</p> 
+                    </div>    
+                </div>
+                <div class="card-main">
+                    <div class="limitless-wifi">
+                        <img class="wifi-img" src="./photo/wifi.svg" alt="img">
+                        <p>5 saat</p>
+                        <p>Limitsiz internet</p>
+                    </div>
+                    <div class="join">
+                        <p>Qoşulmaq üçün #L5 yazıb 216-ya göndərin</p> 
+                        <h3 class="tariff-cost"><span>2.5</span>m</h3>                   
+                    </div>
+                </div>
+            </div>  
+            <div class="tariff-card">
+                <div class="img-card">
+                    <h4 class="tariff-title">Limitsiz</h4>
+                    <div class="use-time">
+                        <p>İstifadə müddəti: 3 saat</p> 
+                    </div>    
+                </div>
+                <div class="card-main">
+                    <div class="limitless-wifi">
+                        <img class="wifi-img" src="./photo/wifi.svg" alt="img">
+                        <p>3 saat</p>
+                        <p>Limitsiz internet</p>
+                    </div>
+                    <div class="join">
+                        <p>Qoşulmaq üçün #L3 yazıb 216-ya göndərin</p> 
+                        <h3 class="tariff-cost"><span>2</span>m</h3>                   
+                    </div>
+                </div>
+            </div>  
+            <div class="tariff-card">
+                <div class="img-card">
+                    <h4 class="tariff-title">Limitsiz</h4>
+                    <div class="use-time">
+                        <p>İstifadə müddəti: həftə sonu</p> 
+                    </div>    
+                </div>
+                <div class="card-main">
+                    <div class="limitless-wifi">
+                        <img class="wifi-img" src="./photo/wifi.svg" alt="img">
+                        <p>Həftə sonu</p>
+                        <p>Limitsiz internet</p>
+                    </div>
+                    <div class="join">
+                        <p>Qoşulmaq üçün #L12 yazıb 216-ya göndərin</p> 
+                        <h3 class="tariff-cost"><span>2.3</span>m</h3>                   
+                    </div>
+                </div>
+            </div>  
+        </div>
+    </div>
+    </section>
+    <section class="client-question">
+        <div class="start-screen">
+            <div class="start-div">
+             <h2>Sənin ehtiyacına tam uyğun internet paketi seç!</h2>
+             <button id="start-btn">Başla</button>
+            </div>
+         </div>
+         <div class="questionnaire hidden">
+             <h2 id="question-title">İnternet trafikinizi ən çox nəyə sərf edirsiniz?</h2>
+             <div class="answers"></div>
+             <div class="progress">
+                 <span id="progress-indicator">1 / 3</span>
+             </div>
+         </div>
+         <div class="result hidden">
+             <h2 id="result-title">Sizin üçün uyğun internet paketi:</h2>
+             <p id="result-details"></p>
+             <button id="restart-btn">Təkrar Başla</button>
+         </div>
+    </section>
+   </main>
+   <footer>
+    <div class="footer-container">
+        <div class="footer-header">
+            <h2>ZetaNetlə əlaqələrini gücləndir</h2>
+            <button class="access-btn"><i class="fa-solid fa-user"></i>Giriş</button>
+        </div>
+        <hr>
+        <div class="footer-main">
+            <div class="footer-item">
+                <h3>Sizin üçün</h3>
+                <ul>
+                    <li>Tariflər</li>
+                    <li>Tətbiqlər</li>
+                    <li>Xidmətlər</li>
+                    <li>Ödəniş</li>
+                </ul>
+            </div>
+            <div class="footer-item">
+                <h3>Tətbiqlərimiz</h3>
+                <ul>
+                    <li>ZetaPlay</li>
+                    <li>ZetaKids</li>
+                    <li>ZetaLingua</li>
+                    <li>ZetaNetMobile</li>
+                </ul>
+            </div>
+            <div class="footer-item">
+                <h3>ZetaNet</h3>
+                <ul>
+                    <li>Haqqımızda</li>
+                    <li>Giriş</li>
+                    <li>Əlaqə</li>
+                </ul>
+            </div>
+            <div class="footer-logo">
+                <img src="./photo/freepik-gradient-news-group-logo-20241209092733D0hM-removebg-preview.png" alt="img">
+            </div>
+        </div>
+        <hr>
+        <div class="footer">
+            <div>
+                <p>Çağrı mərkəzi: <b>*216</b></p>
+                <p>Email: zetanet@gmail.com</p>
+                <p>©2024 ZetaNet Telecom” MMC</p>
+            </div>
+            <div>
+                <img src="./photo/facebook-yeni.png" alt="img">
+            <img src="./photo/instagram.png" alt="img">
+            <img src="./photo/linkedin-yeni.png" alt="img">
+            </div>
+        </div>
+    </div>
+</footer>
+    <script src="./tariff.js"></script>
+</body>
+</html>

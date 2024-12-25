@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZetaNet</title>
+    <link rel="icon" type="image/x-icon" href="./images/freepik-gradient-news-group-logo-20241209092733D0hM-removebg-preview.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <header>
+                <div class="modal-overlay"></div>
+
+            <div class="access-modul">
+                <div class="access-main-modul">
+                    <button class="close-btn" id="close-modal">X</button>
+                    <h2>Qeydiyyat</h2>
+                    <form>
+                        <label for="mobile">Mobil nömrə</label>
+                        <input type="text" class="mobile"  placeholder="+994 (16) ___ __ __" maxlength="19" id="mobile">
+                        <br>
+                        <label for="name">Adınız:</label>
+                        <input id="name" type="text">
+                        <br>
+                        <label for="surname">Soyadınız:</label>
+                        <input id="surname" type="text">
+                        <br>
+                        <label for="email">Emailiniz:</label>
+                        <input id="email" type="email">
+                        <br>
+                        <button type="submit">Təsdiqlə</button>
+                    </form>
+                </div>
+            </div>
+            <div class="header-wrapper">
+                <div class="header-menu">
+                    <div class="logo">
+                        <img src="./images/freepik-gradient-news-group-logo-20241209092733D0hM-removebg-preview.png" alt="img">
+                    </div>
+                    <button class="menu-toggle" aria-label="Open Menu">
+                        ☰
+                      </button>
+                    <div class="menu-wrapper">
+                        <button class="menu-toggle" aria-label="Open Menu">
+                            ☰
+                          </button>
+                        <ul class="navbar">
+                            <li class="nav-item"><a href="#">Ana səhifə</a></li>
+                            <li class="nav-item"><a href="about/about.html">Haqqımızda</a></li>
+                            <li class="nav-item"><a href="tariff/tariff.html">Tariflər</a></li>
+                            <li class="nav-item"><a href="application/application.html">Xidmətlər</a></li>
+                            <li class="connect"><a href="connect/connect.html">Əlaqə</a></li>
+                        </ul>    
+                    </div>
+                </div>
+                <div class="overlay"></div>
+                <div class="slideshow">
+                    <div class="slide">
+                        <h2>Sürətli və Etibarlı Rabitə Xidmətləri</h2>
+                        <p>ZetaNet ilə dünyanın istənilən nöqtəsi sizinlə. <br> Sürət, keyfiyyət və müştəri məmnuniyyətini seçin.</p>
+                        <!-- <button> <a href="./tariff/tariff.html">Tariflər</a></button> -->
+                        <a href="./tariff/tariff.html"><button>Tariflər</button></a>
+                    </div>
+                    <div class="slide">
+                        <h2>Yüksək Keyfiyyətli Xidmətləri</h2>
+                        <p>Bizimlə əlaqədə olun və keyfiyyətli xidmətlərlə tanış olun. <br> Sizin rahatlığınız bizim önceliyimizdir.</p>
+                        <!-- <button> <a href="./tariff/tariff.html">Tariflər</a></button> -->
+                        <a href="./tariff/tariff.html"><button>Tariflər</button></a>
+                    </div>
+                    <div class="slide">
+                        <h2>Dünyanın Hər Yeri ilə Əlaqə</h2>
+                        <p>Texnologiyanı müasir şəkildə istifadə edərək, dünyanın hər yerində <br> əlaqə saxlayın. ZetaNet ilə əlaqə heç vaxt bu qədər rahat olmamışdı.</p>
+                        <!-- <button> <a href="./tariff/tariff.html">Tariflər</a></button> -->
+                         <a href="./tariff/tariff.html"><button>Tariflər</button></a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main>
+            <section class="tariff-packets">
+                <h2>Sərfəli Tariflər</h2>
+                <div class="tariff-container">
+                <div class="slider-container">
+                    <div class="tariff-cards slider">      
+                    <div class="tariff-card">
+                        <div class="img-card">
+                            <h4 class="tariff-title">UltraPlus</h4>
+                            <div class="card-button first">
+                                <button>15m</button>
+                                <button>18m</button>
+                                <button>20m</button>
+                            </div>
+                        </div>
+                        <div class="card-main">
+                            <div class="call">
+                                <img class="card-icon" src="./images/call.svg" alt="img">
+                                <p>Ölkədaxili zəng: <span class="first1">300</span>dəq</p>
+                            </div>
+                            <div class="internet">
+                                <img src="./images/internet.svg" alt="img">
+                                <p>İnternet: <span class="first2">20</span>GB</p>
+                            </div>
+                            <div class="limitless">
+                                <img src="./images/whatsapp.svg" alt="img">
+                                <p>Limitsiz Yazışma</p>
+                            </div>
+                            <div class="join">
+                                <p>Qoşulmaq üçün UP yazıb 216-ya göndərin</p>
+                                <i class="slogan">Əyləncənin heç bir sərhədi yoxdur!</i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tariff-card">
+                        <div class="img-card">
+                            <h4 class="tariff-title">Tələbə Paketi</h4>
+                            <div class="card-button second">
+                                <button>6m</button>
+                                <button>8m</button>
+                                <button>10m</button>
+                            </div>
+                        </div>
+                        <div class="card-main">
+                            <div class="call">
+                                <img class="card-icon" src="./images/call.svg" alt="img">
+                                <p>Ölkədaxili zəng: <span class="second1">100</span>dəq</p>
+                            </div>
+                            <div class="internet">
+                                <img src="./images/internet.svg" alt="img">
+                                <p>İnternet: <span class="second2">50</span>GB</p>
+                            </div>
+                            <div class="limitless">
+                                <img src="./images/whatsapp.svg" alt="img">
+                                <p>Limitsiz internet</p>
+                            </div>
+                            <div class="join">
+                                <p>Qoşulmaq üçün *TP yazıb 216-ya göndərin</p>
+                                <i class="slogan">Təhsildə uğur və internetdə güvən!</i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tariff-card">
+                        <div class="img-card">
+                            <h4 class="tariff-title">AktivGənc</h4>
+                            <div class="card-button third">
+                                <button>10m</button>
+                                <button>12m</button>
+                                <button>14m</button>
+                            </div>
+                        </div>
+                        <div class="card-main">
+                            <div class="call">
+                                <img class="card-icon" src="./images/call.svg" alt="img">
+                                <p>Ölkədaxili zəng: <span class="third1">200</span>dəq</p>
+                            </div>
+                            <div class="internet">
+                                <img src="./images/internet.svg" alt="img">
+                                <p>İnternet: <span class="third2">10</span>GB</p>
+                            </div>
+                            <div class="limitless">
+                                <img src="./images/whatsapp.svg" alt="img">
+                                <p>Limitsiz yazışma</p>
+                            </div>
+                            <div class="join">
+                                <p>Qoşulmaq üçün *12 yazıb 216-ya göndərin</p>
+                                <i class="slogan">Gənclik enerjisi ilə dolu, gözəl dünya!</i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tariff-card">
+                        <div class="img-card">
+                            <h4 class="tariff-title">AiləPaketi</h4>
+                            <div class="card-button fourth">
+                                <button>20m</button>
+                                <button>25m</button>
+                                <button>30m</button>
+                            </div>
+                        </div>
+                        <div class="card-main">
+                            <div class="call">
+                                <img class="card-icon" src="./images/call.svg" alt="img">
+                                <p>Ölkədaxili zəng: <span class="fourth1">600</span>dəq</p>
+                            </div>
+                            <div class="internet">
+                                <img src="./images/internet.svg" alt="img">
+                                <p>İnternet: <span class="fourth2">50</span>GB</p>
+                            </div>
+                            <div class="limitless">
+                                <img src="./images/whatsapp.svg" alt="img">
+                                <p>Limitsiz yazışma</p>
+                            </div>
+                            <div class="join">
+                                <p>Qoşulmaq üçün *31 yazıb 216-ya göndərin</p>
+                                <i class="slogan">Hamı bir tarifdə, ailəniz güvəndə!</i>
+                            </div>
+                        </div>
+                    </div>   
+                </div>
+            </div>
+            <div class="tariff-arrow">
+                <button class="slider-arrow left-arrow">&#10094;</button>
+                <button class="slider-arrow right-arrow">&#10095;</button>
+            </div>
+        </div>
+            </section>
+            <section class="services">
+                <h2>Xidmətlər</h2>
+                <div class="services-container">
+                    <div class="services-button">
+                        <button>Limitsiz İnternet Paketləri</button>
+                        <button>Ailə Planları</button>
+                        <button>Roaming Xidmətləri</button>
+                    </div>
+                    <div class="limitless-internet">
+                    <div class="services-main">
+                        <div class="services-title">
+                            <h3>Limitsiz İnternet Paketləri</h3>
+                            <p>Limitsiz internet paketləri, xüsusilə yüksək miqdarda məlumat istifadə edən müştərilər üçün nəzərdə tutulmuşdur. Bu xidmətlər istifadəçilərə sabit ödəniş qarşılığında sərhədsiz məlumat ötürmə imkanı yaradır.</p>
+                            <!-- <button><a href="./tariff/tariff.html">Tariflər</a></button> -->
+                             <a href="./tariff/tariff.html"><button>Tariflər</button></a>
+                        </div>
+                        <div class="services-card">
+                            <div class="services-img">
+                                <img src="./images/2551650.jpg" alt="img">
+                            </div>
+                            <h3>Məqsədli İstifadəçilər:</h3>
+                            <ul class="services-card-list">
+                                <li>Onlayn dərslərə qoşulan tələbələr</li>
+                                <li>Evdən işləyənlər</li>
+                                <li>Onlayn oyun və ya axın xidmətlərindən istifadə edənlər</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                    <div class="family-internet services-hidden">
+                    <div class="services-main">
+                        <div class="services-title">
+                            <h3>Ailə Planları</h3>
+                            <p>Ailə planları bir neçə ailə üzvünü eyni tarifə qoşaraq xərcləri optimallaşdırmağa imkan yaradır. Bu xidmətlər fərdi tariflərdən daha sərfəlidir və ailənin bütün üzvləri üçün bir şəbəkə çərçivəsində geniş imkanlar yaradır.</p>
+                            <!-- <button><a href="./tariff/tariff.html">Tariflər</a></button> -->
+                             <a href="./tariff/tariff.html"><button>Tariflər</button></a>
+                        </div>
+                        <div class="services-card">
+                            <div class="services-img">
+                                <img src="./images/08.jpg" alt="img">
+                            </div>
+                            <h3>Məqsədli İstifadəçilər:</h3>
+                            <ul class="services-card-list">
+                                <li>Eyni operatora qoşulmuş böyük ailələr.</li>
+                                <li>Ailə büdcəsini daha effektiv idarə etmək istəyənlər</li>
+                                <li>Onlayn oyun və ya axın xidmətlərindən istifadə edənlər</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                    <div class="rouminq-internet services-hidden">
+                    <div class="services-main">
+                        <div class="services-title">
+                            <h3>Roaming Xidmətləri</h3>
+                            <p>Roming xidmətləri xaricdə səyahət edən müştərilərə öz nömrələrindən istifadə etməyə imkan verir. Bu xidmətlər beynəlxalq zənglər, SMS və məlumat ötürmə imkanı yaradır.</p>
+                            <!-- <button><a href="./tariff/tariff.html">Tariflər</a></button> -->
+                             <a href="./tariff/tariff.html"><button>Tariflər</button></a>
+                        </div>
+                        <div class="services-card">
+                            <div class="services-img">
+                                <img src="./images/58869.jpg" alt="img">
+                            </div>
+                            <h3>Tətbiq Nümunələri:</h3>
+                            <ul class="services-card-list">
+                                <li>İşgüzar səfərlər zamanı beynəlxalq zənglər və məlumat mübadiləsi</li>
+                                <li>Xaricdə yaşayan yaxınlarla əlaqə saxlamaq</li>
+                                <li>Xarici turistlər üçün rahatlıq</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </section>
+            <section class="applications">
+                <h2>Populyar Tətbiqlərimiz</h2>
+                <div class="carousel-container">
+                    <div class="app-cards-wrapper">
+                    <div class="app-cards">
+                        <div class="app-card">
+                            <div class="app-img">
+                                <img  src="./images/zetaplay.webp" alt="img">
+                            </div>
+                            <div class="app-article">
+                               <h3>ZetaPlay</h3>
+                               <p>ZetaPlay ilə Sərhədsiz Əyləncənin Həzzini Yaşayın.Əyləncə ilə dolu hər anı dəyərləndirin, dostlarınızla rəqabət aparın! Mobil cihazlarınız vasitəsilə oyunlara asanlıqla qoşulun, fərdi bacarıqlarınızı artırın və rəqiblərinizlə əylənin.</p>
+                            </div>
+                            <!-- <button class="app-button"><a href="./application/application.html">Ətraflı</a></button> -->
+                             <a href="./application/application.html"><button class="app-button">Ətraflı</button></a>
+                        </div>
+                        <div class="app-card">
+                            <div class="app-img">
+                                <img  src="./images/zetakids.webp" alt="img">
+                            </div>
+                            <div class="app-article">
+                               <h3>ZetaKids</h3>
+                               <p>Təhsil dünyasını uşaqlar üçün əyləncəli hala gətirən ZetaKids. Bu tətbiq uşaqlara biliklər öyrənmək üçün yeni imkanlar yaradır. Hər yaşa uyğun dərslər və maraqlı fəaliyyətlərlə təhsili zənginləşdirərək uşaqlara zövqlü öyrənmə təcrübəsi bəxş edin. Gələcək üçün hazır olun! </p>
+                            </div>
+                            <!-- <button class="app-button"><a href="./application/application.html">Ətraflı</a></button> -->
+                            <a href="./application/application.html"><button class="app-button">Ətraflı</button></a>
+
+                        </div>
+                        <div class="app-card">
+                            <div class="app-img">
+                                <img  src="./images/zetalingua.webp" alt="img">
+                            </div>
+                            <div class="app-article">
+                               <h3>ZetaLingua</h3>
+                               <p>ZetaLingua – Yeni Dillər, Yeni Üfüqlər! Dünyanın müxtəlif dillərini öyrənməyi asanlaşdıran bu platforma biliklərinizi artırır. İnnovativ alətlərlə qlobal əlaqələr qurun, dil biliklərinizi genişləndirin və yeni fürsətlər əldə edin.</p>
+                            </div>
+                            <!-- <button class="app-button"><a href="./application/application.html">Ətraflı</a></button> -->
+                            <a href="./application/application.html"><button class="app-button">Ətraflı</button></a>
+
+                        </div>
+                        <div class="app-card">
+                            <div class="app-img">
+                                <img  src="./images/zetanetMobile.webp" alt="img">
+                            </div>
+                            <div class="app-article">
+                               <h3>ZetaMobile</h3>
+                               <p>ZetaNet Mobil Tətbiqi ilə bütün xidmətlərə sürətli çıxış imkanı! Tariflərinizi idarə edin, balansınızı artırın və istifadənizi izləyin. Real vaxtda tam nəzarətə sahib olun! Texniki dəstək hər zaman xidmətinizdədir, mobil təcrübənizi tam idarə edin</p>
+                            </div>
+                            <!-- <button class="app-button"><a href="./application/application.html">Ətraflı</a></button> -->
+                            <a href="./application/application.html"><button class="app-button">Ətraflı</button></a>
+
+                        </div>
+                    </div>
+                </div>
+                </div>
+                <div class="pagination">
+                    <button class="prev-btn">&#10094;</button>
+
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <button class="next-btn">&#10095;</button>
+
+                  </div>
+            </section>
+            <section class="payment">
+                <h2>Ödəniş</h2>
+                <div class="payment-container">
+                    <div class="payment-input">
+                        <div class="payment-title">
+                            <p>Balansın artırılması</p>
+                            <h3>Bank kartları ilə <br> balansını dərhal <br> artır</h3>
+                        </div>
+                        <div class="mobile-input">
+                            <label for="first">Mobil nömrə</label>
+                            <input type="text" class="mobile" placeholder="+994 (16) ___ __ __" maxlength="19" id="first">
+                        </div>
+                        <div class="pay-input">
+                            <label for="amount">Məbləği seç</label>
+                                <input type="number" id="amount" min="1" max="200" value="0" step="1">
+                                    <input type="range" id="range-slider" min="1" max="200" value="0" step="1">
+                            <p>Min:1AZN, Max:200AZN</p>
+                        </div>
+                        <button class="pay-btn">Ödə</button>
+                    </div>
+                    <div class="payment-card">
+                        <div class="pay-card">
+                            <img class="sim-card" src="./images/sim-card-chip.png" alt="picture">
+                            <div class="card-number">
+                                <p>Bank kartının nömrəsini daxil edin</p>
+                                <input placeholder="XXXXXXXXXXXXXXXX" type="text" maxlength="22">
+                            </div>
+                           <div class="card-date">
+                              <div>
+                                <p class="date">Valid thru:</p>
+                            <p>07/22</p>
+                              </div>
+                            <img class="master-logo" src="./images/MasterCard_1979_logo.svg.png" alt="card">
+                            </div>
+
+                          </div>
+                    </div>
+                    <div class="pay-hidden-back"></div>
+                    <div class="pay-overlay">
+                        <button>x</button>
+                        <h2 id="pay-message"></h2>
+                      </div>
+                </div>
+            </section>
+            <section class="more-information">
+                <h2>Ətraflı məlumat</h2>
+                <div class="info-container">
+                    <div class="info-menu">
+                        <div class="info-item">
+                        <div class="info-header">
+                            <p class="info-title">Balansını idarə et</p>
+                            <img src="./images/top-arrow.svg" alt="">
+                        </div>
+                        <div class="info-content">
+                            <p class="info-content-main">Balansını artır, sərhədsiz ünsiyyətin dadını çıxar. Zetanet ilə rahat ödəmələr və üstün paketlər.</p>
+                        </div>
+                    </div>
+                        <div class="info-item">
+                        <div class="info-header">
+                            <p class="info-title">Bonus və Hədiyyələr</p>
+                            <img src="./images/top-arrow.svg" alt="img">
+                        </div>
+                        <div class="info-content">
+                            <p class="info-content-main">Bonus və xüsusi təkliflərimizdən faydalan. Zetanet ilə daha çox dəyər qazan.</p>
+                        </div>
+                    </div>
+                        <div class="info-item">
+                        <div class="info-header">
+                            <p class="info-title">Sosial Mediya Həvəskarları üçün</p>
+                            <img src="./images/top-arrow.svg" alt="img">
+                        </div>
+                        <div class="info-content">
+                            <p class="info-content-main">Zetanet sosial media paketləri ilə heç bir paylaşımınızı qaçırmayın.</p>
+                        </div>
+                    </div>
+                        <div class="info-item">
+                        <div class="info-header">
+                            <p class="info-title">Tarif seçimi</p>
+                            <img src="./images/top-arrow.svg" alt="img">
+                        </div>
+                        <div class="info-content">
+                            <p class="info-content-main">Hər bir tarifə və internet paketina uyğun kodu yaz *216-ya göndər.</p>
+                        </div>
+                    </div>
+                        <div class="info-item">
+                        <div class="info-header">
+                            <p class="info-title">Hesabını idarə et</p>
+                            <img src="./images/top-arrow.svg" alt="img">
+                        </div>
+                        <div class="info-content">
+                            <p class="info-content-main">ZetaNet mobil tətbiqi ilə hesab parametrlərini sərfəli idarə et </p>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="info-animation">
+                        <lottie-player
+  src="./images/Animation1733503850609.json"
+  background="transparent"
+  speed="1"
+  loop
+  autoplay>
+</lottie-player>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="footer-container">
+                <div class="footer-header">
+                    <h2>ZetaNetlə əlaqələrini gücləndir</h2>
+                    <button class="access-btn"><i class="fa-solid fa-user"></i>Giriş</button>
+                </div>
+                <hr>
+                <div class="footer-main">
+                    <div class="footer-item">
+                        <h3>Sizin üçün</h3>
+                        <ul>
+                            <li>İnternet paketləri</li>
+                            <li>Tariflər</li>
+                            <li>Xidmətlər</li>
+                            <li>Ödəniş</li>
+                        </ul>
+                    </div>
+                    <div class="footer-item">
+                        <h3>Tətbiqlərimiz</h3>
+                        <ul>
+                            <li>ZetaPlay</li>
+                            <li>ZetaKids</li>
+                            <li>ZetaLingua</li>
+                            <li>ZetaNetMobile</li>
+                        </ul>
+                    </div>
+                    <div class="footer-item">
+                        <h3>ZetaNet</h3>
+                        <ul>
+                            <li>Haqqımızda</li>
+                            <li>Giriş</li>
+                            <li>Əlaqə</li>
+                        </ul>
+                    </div>
+                    <div class="footer-logo">
+                        <img src="./images/freepik-gradient-news-group-logo-20241209092733D0hM-removebg-preview.png" alt="img">
+                    </div>
+                </div>
+                <hr>
+                <div class="footer">
+                    <div>
+                        <p>Çağrı mərkəzi: <b>*216</b></p>
+                        <p>Email: zetanet@gmail.com</p>
+                        <p>©2024 ZetaNet Telecom” MMC</p>
+                    </div>
+                    <div>
+                        <img src="./images/facebook-yeni.png" alt="img">
+                    <img src="./images/instagram.png" alt="img">
+                    <img src="./images/linkedin-yeni.png" alt="img">
+                    </div>
+                </div>
+            </div>
+        </footer>
+        </div>
+    </div>
+    <div id="map"></div>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script>
+        const map = L.map('map').setView([40.37915, 49.85644], 16); 
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        L.marker([40.37915, 49.85644]).addTo(map)
+            .bindPopup('<b>ZetaNet</b><br>ZetaNet Telecom” MMC')
+            .openPopup();
+    </script>
+    <script src="app.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+</body>
+</html>
