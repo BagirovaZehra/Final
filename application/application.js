@@ -37,32 +37,27 @@ overlay.addEventListener('click', () => {
   overlay.classList.remove('show'); 
 });
 
-const sections = document.querySelectorAll(".animated-section");
-
-const observer = new IntersectionObserver((entries, observer) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add("show"); // Görünən bölməyə `.show` sinfi əlavə et
-      observer.unobserve(entry.target); // Müşahidəni dayandır
-    }
-  });
-}, { threshold: 0.1 }); // Bölmənin ən az 10%-i görünəndə işə düşəcək
-
-sections.forEach(section => {
-  observer.observe(section); // Hər bir bölmə üçün müşahidə yaradılır
-});
+const connectBtn = document.querySelector(".connect");
+const connectText = document.querySelector(".connect a");
+connectBtn.addEventListener("mouseenter",()=>{
+  connectBtn.style.backgroundColor="#0077b6"
+  connectText.style.color="white"
+})
+connectBtn.addEventListener("mouseleave",()=>{
+  connectBtn.style.backgroundColor="white"
+  connectText.style.color="black"
+})
 
 document.addEventListener("DOMContentLoaded", () => {
   const thumbnails = document.querySelectorAll(".thumbnail");
-  const prevButton = document.getElementById("prev");
-  const nextButton = document.getElementById("next");
-  const titleElement = document.getElementById("title");
-  const descriptionElement = document.getElementById("description");
-  const detailsButton = document.getElementById("details-button");
+  const prevButton = document.querySelector("#prev");
+  const nextButton = document.querySelector("#next");
+  const titleElement = document.querySelector("#title");
+  const descriptionElement = document.querySelector("#description");
+  const detailsButton = document.querySelector("#details-button");
   const infoContainers = document.querySelectorAll(".info-container");
   let currentIndex = 0;
 
-  // Thumbnail aktivliyini yeniləyin
   const updateActiveThumbnail = () => {
     thumbnails.forEach((thumbnail, index) => {
       thumbnail.classList.toggle("active", index === currentIndex);
@@ -185,10 +180,18 @@ const rangeSlider = document.querySelector("#range-slider");
 
 rangeSlider.addEventListener("input", () => {
   numberInput.value = rangeSlider.value;
+  if(numberInput.value === ""){
+    rangeSlider.value = 1;
+    numberInput.value = 1;
+  }
 });
 
 numberInput.addEventListener("input", () => {
-  let value = parseInt(numberInput.value, 10);
+  let value = Number(numberInput.value)
+
+  if (isNaN(value)) {
+    value = rangeSlider.min; 
+  }
 
   if (value < rangeSlider.min) value = rangeSlider.min;
   if (value > rangeSlider.max) value = rangeSlider.max;
@@ -266,7 +269,6 @@ closeBtn.addEventListener("click",()=>{
   modalOverlay.style.display = "none";
 })
 const accessForm = document.querySelector(".access-main-modul form");
-//  const accessInputs = accessForm.querySelectorAll("input");
  const accessName = document.querySelector("#name")
  const accessSurname = document.querySelector("#surname")
  const accessEmail = document.querySelector("#email")
@@ -281,7 +283,7 @@ const accessForm = document.querySelector(".access-main-modul form");
  document.body.appendChild(popupOverlay);
  document.body.appendChild(popup);
  
- function showPopup(message, success = true) {
+ function showPopup(message, success) {
      popup.textContent = message;
      if (success) {
          popup.style.backgroundColor = "#4CAF50"; 
@@ -346,26 +348,25 @@ closePayBtn.addEventListener("click",()=>{
 })
 
 
- const mobileInput = document.getElementById('phoneInput');
- const searchBtn = document.getElementById('searchBtn');
- const resetBtn = document.getElementById('resetBtn');
- const resultsBody = document.getElementById('resultsBody');
+ const mobileInput = document.querySelector('#phoneInput');
+ const searchBtn = document.querySelector('#searchBtn');
+ const resetBtn = document.querySelector('#resetBtn');
+ const resultsBody = document.querySelector('#resultsBody');
  
- // Mock data
  const data = [
-   { number: "0163121848", price: "6 AZN" },
-   { number: "0163121849", price: "7 AZN" },
-   { number: "0163121850", price: "5 AZN" },
-   { number: "0164228844", price: "20 AZN" },
-   { number: "0165138906", price: "5 AZN" },
-   { number: "0163131113", price: "15 AZN" },
-   { number: "0162852245", price: "7 AZN" },
-   { number: "0169100109", price: "25 AZN" },
-   { number: "0162110508", price: "30 AZN" },
-   { number: "0165675667", price: "27 AZN" },
-   { number: "0162562556", price: "50 AZN" },
-   { number: "0165981637", price: "3 AZN" },
-   { number: "0163238233", price: "15 AZN" },
+   { number: "016 312 18 48", price: "6 AZN" },
+   { number: "016 312 18 49", price: "7 AZN" },
+   { number: "016 312 18 50", price: "5 AZN" },
+   { number: "016 422 88 44", price: "20 AZN" },
+   { number: "016 513 89 06", price: "5 AZN" },
+   { number: "016 313 11 13", price: "15 AZN" },
+   { number: "016 285 22 45", price: "7 AZN" },
+   { number: "016 910 01 09", price: "25 AZN" },
+   { number: "016 211 05 08", price: "30 AZN" },
+   { number: "016 567 56 67", price: "27 AZN" },
+   { number: "016 256 25 56", price: "50 AZN" },
+   { number: "016 598 16 37", price: "3 AZN" },
+   { number: "016 323 82 33", price: "15 AZN" },
  ];
  
  mobileInput.addEventListener('input', (e) => {
@@ -386,8 +387,8 @@ closePayBtn.addEventListener("click",()=>{
      alert('Zəhmət olmasa tam nömrə daxil edin.');
      return;
    }
+   let fullNumber = `016 ${input.slice(0, 3)} ${input.slice(3, 5)} ${input.slice(5, 7)}`
  
-   const fullNumber = `016${input}`;
    const result = data.find(entry => entry.number === fullNumber);
  
    resultsBody.innerHTML = '';

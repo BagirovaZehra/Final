@@ -20,23 +20,19 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     showSlide(currentIndex);
-    setInterval(nextSlide, 5000); 
+    setInterval(nextSlide, 4000); 
 });
 
-const sections = document.querySelectorAll(".animated-section");
-
-const observer = new IntersectionObserver((entries, observer) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add("show"); 
-      observer.unobserve(entry.target); 
-    }
-  });
-}, { threshold: 0.1 }); 
-
-sections.forEach(section => {
-  observer.observe(section); 
-});
+const connectBtn = document.querySelector(".connect");
+const connectText = document.querySelector(".connect a");
+connectBtn.addEventListener("mouseenter",()=>{
+  connectBtn.style.backgroundColor="#0077b6"
+  connectText.style.color="white"
+})
+connectBtn.addEventListener("mouseleave",()=>{
+  connectBtn.style.backgroundColor="white"
+  connectText.style.color="black"
+})
 
 
 const burgerIcon = document.querySelectorAll('.menu-toggle');
@@ -207,6 +203,10 @@ function updateCarousel() {
   if (currentWidth >= 1280) {
     result = 51;
     minIndex = appCard.length - 2;
+    const dynamicDot = document.querySelector(".dot.dynamic");
+    if (dynamicDot) {
+      dynamicDot.remove();
+    }
   } else if (currentWidth >= 850 && currentWidth < 1280) {
     result = 50;
     minIndex = appCard.length - 2;
@@ -223,6 +223,10 @@ function updateCarousel() {
       let newDot = document.createElement("span");
       newDot.classList.add("dot", "dynamic"); 
       pagination.append(newDot);
+      newDot.addEventListener("click", () => {
+        currentNumber = minIndex;
+        updateCarousel();
+      });
     }
   }
 
@@ -239,7 +243,9 @@ function updateCarousel() {
     }
   });
 }
-
+window.addEventListener("resize", () => {
+  updateCarousel();
+});
 
 prevBtn.addEventListener("click", () => {
 if(currentNumber===0){
@@ -301,10 +307,18 @@ const rangeSlider = document.querySelector("#range-slider");
 
 rangeSlider.addEventListener("input", () => {
   numberInput.value = rangeSlider.value;
+  if(numberInput.value === ""){
+    rangeSlider.value = 1;
+    numberInput.value = 1;
+  }
 });
 
 numberInput.addEventListener("input", () => {
-  let value = parseInt(numberInput.value, 10);
+  let value = Number(numberInput.value);
+
+  if (isNaN(value)) {
+    value = rangeSlider.min; 
+  }
 
   if (value < rangeSlider.min) value = rangeSlider.min;
   if (value > rangeSlider.max) value = rangeSlider.max;
@@ -312,6 +326,7 @@ numberInput.addEventListener("input", () => {
   rangeSlider.value = value;
   numberInput.value = value;
 });
+
 
 const infoMenuHeader = document.querySelectorAll(".info-header");
 infoMenuHeader.forEach((btn) => {
@@ -345,7 +360,6 @@ closeBtn.addEventListener("click",()=>{
 })
 
  const accessForm = document.querySelector(".access-main-modul form");
-//  const accessInputs = accessForm.querySelectorAll("input");
  const accessName = document.querySelector("#name")
  const accessSurname = document.querySelector("#surname")
  const accessEmail = document.querySelector("#email")
@@ -360,7 +374,7 @@ closeBtn.addEventListener("click",()=>{
  document.body.appendChild(popupOverlay);
  document.body.appendChild(popup);
  
- function showPopup(message, success = true) {
+ function showPopup(message, success) {
      popup.textContent = message;
      if (success) {
          popup.style.backgroundColor = "#4CAF50"; 
@@ -418,6 +432,7 @@ cardInput.addEventListener("input", (e) => {
 
   e.target.setSelectionRange(newCursorPosition, newCursorPosition); 
 });
+
 const firstNum =  document.querySelector("#first")
 const payBtn = document.querySelector(".pay-btn")
 const payOverlay = document.querySelector(".pay-overlay h2")

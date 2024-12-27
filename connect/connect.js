@@ -15,6 +15,16 @@ closeBtn.addEventListener("click",()=>{
   modalOverlay.style.display="none"
 
 })
+const connectBtn = document.querySelector(".connect");
+const connectText = document.querySelector(".connect a");
+connectBtn.addEventListener("mouseenter",()=>{
+  connectBtn.style.backgroundColor="#0077b6"
+  connectText.style.color="white"
+})
+connectBtn.addEventListener("mouseleave",()=>{
+  connectBtn.style.backgroundColor="white"
+  connectText.style.color="black"
+})
 
  const burgerIcon = document.querySelectorAll('.menu-toggle');
 const menuWrapper = document.querySelector(".menu-wrapper")
@@ -60,6 +70,7 @@ phone.addEventListener("input", function (e) {
 
 
 
+
 const form = document.querySelector(".connect-form form");
 const nameInput = document.querySelector("#name");
 const mobileInput = document.querySelector("#phone");
@@ -75,7 +86,7 @@ popup.classList.add("popup");
 document.body.appendChild(popupOverlay);
 document.body.appendChild(popup);
 
-function showPopup(message, success = true) {
+function showPopup(message, success) {
     popup.textContent = message;
     if (success) {
         popup.style.backgroundColor = "#4CAF50"; 

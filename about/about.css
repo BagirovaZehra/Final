@@ -626,11 +626,9 @@ footer{
     font-size: 1em;
    }
    .slide img{
-    margin-right: 0;
-   }
-   .slide img{
-    width: 310px;
+    width: 330px;
     height: 300px;
+    margin-right: 0;
    }
    .header-wrapper{
     height: 450px;

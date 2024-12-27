@@ -21,6 +21,16 @@ document.addEventListener("DOMContentLoaded", () => {
     showSlide(currentIndex);
     setInterval(nextSlide, 5000); 
 });
+const connectBtn = document.querySelector(".connect");
+const connectText = document.querySelector(".connect a");
+connectBtn.addEventListener("mouseenter",()=>{
+  connectBtn.style.backgroundColor="#0077b6"
+  connectText.style.color="white"
+})
+connectBtn.addEventListener("mouseleave",()=>{
+  connectBtn.style.backgroundColor="white"
+  connectText.style.color="black"
+})
 
 const burgerIcon = document.querySelectorAll('.menu-toggle');
 const menuWrapper = document.querySelector(".menu-wrapper")
@@ -76,7 +86,6 @@ closeBtn.addEventListener("click",()=>{
 
 })
  const accessForm = document.querySelector(".access-main-modul form");
-//  const accessInputs = accessForm.querySelectorAll("input");
  const accessName = document.querySelector("#name")
  const accessSurname = document.querySelector("#surname")
  const accessEmail = document.querySelector("#email")
@@ -91,7 +100,7 @@ closeBtn.addEventListener("click",()=>{
  document.body.appendChild(popupOverlay);
  document.body.appendChild(popup);
  
- function showPopup(message, success = true) {
+ function showPopup(message, success) {
      popup.textContent = message;
      if (success) {
          popup.style.backgroundColor = "#4CAF50"; 

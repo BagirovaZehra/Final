@@ -21,6 +21,16 @@ document.addEventListener("DOMContentLoaded", () => {
     showSlide(currentIndex);
     setInterval(nextSlide, 5000); 
 });
+const connectBtn = document.querySelector(".connect");
+const connectText = document.querySelector(".connect a");
+connectBtn.addEventListener("mouseenter",()=>{
+  connectBtn.style.backgroundColor="#0077b6"
+  connectText.style.color="white"
+})
+connectBtn.addEventListener("mouseleave",()=>{
+  connectBtn.style.backgroundColor="white"
+  connectText.style.color="black"
+})
 
 const burgerIcon = document.querySelectorAll('.menu-toggle');
 const menuWrapper = document.querySelector(".menu-wrapper")
@@ -52,8 +62,6 @@ closeBtn.addEventListener("click",()=>{
   modalOverlay.style.display = "none";
 })
 const accessForm = document.querySelector(".access-main-modul form");
-console.log(accessForm);
-
  const accessName = document.querySelector("#access-name")
  const accessSurname = document.querySelector("#access-surname")
  const accessEmail = document.querySelector("#access-email")
@@ -68,7 +76,7 @@ console.log(accessForm);
  document.body.appendChild(popupOverlay);
  document.body.appendChild(popup);
  
- function showPopup(message, success = true) {
+ function showPopup(message, success) {
      popup.textContent = message;
      if (success) {
          popup.style.backgroundColor = "#4CAF50"; 
@@ -300,9 +308,9 @@ const tariffs = [
 ];
 
 function updateQuestion() {
-    const questionTitle = document.getElementById("question-title");
+    const questionTitle = document.querySelector("#question-title");
     const answersContainer = document.querySelector(".answers");
-    const progressIndicator = document.getElementById("progress-indicator");
+    const progressIndicator = document.querySelector("#progress-indicator");
 
     const question = questions[currentQuestion];
     questionTitle.textContent = question.title;
@@ -336,7 +344,7 @@ function showResult() {
     const resultContainer = document.querySelector(".result");
     resultContainer.classList.remove("hidden");
 
-    const resultDetails = document.getElementById("result-details");
+    const resultDetails = document.querySelector("#result-details");
 
     let matchedTariff;
 
@@ -364,7 +372,7 @@ function showResult() {
     resultDetails.textContent = `${matchedTariff.name} - Qiymət: ${matchedTariff.price} AZN, Müddət: ${matchedTariff.duration}`;
 }
 
-document.getElementById("start-btn").addEventListener("click", () => {
+document.querySelector("#start-btn").addEventListener("click", () => {
     document.querySelector(".start-screen").classList.add("hidden");
     document.querySelector(".questionnaire").classList.remove("hidden");
     updateQuestion();

@@ -194,7 +194,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.3); 
+    background: rgba(0, 0, 0, 0.5); 
     z-index: 1; 
 }
 
@@ -795,8 +795,8 @@ color: white;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.7); /* Qara şəffaf fon */
-  z-index: 1002; /* Popup-dan bir addım aşağı */
+  background-color: rgba(0, 0, 0, 0.7); 
+  z-index: 1002; 
   display: none;
   opacity: 0;
   transition: opacity 0.3s ease;
@@ -1479,21 +1479,30 @@ footer .access-btn{
     flex-wrap: wrap;
   }
   .services-title{
+    margin: 0 auto;
     width: 95%;
   }
   .services-card{
     width: 70%;
+    margin: 0 auto;
   }
   .services-img img{
     height: 250px;
   }
   .services-title h3{
+    text-align: center;
     font-size: 2em;
     padding: 20px;
   }
   .services-title p{
+    text-align: center;
     padding-left: 20px;
     font-size: 1em;
+  }
+
+  .services-title button{
+    margin: 30px 0;
+    margin-left: 15%;
   }
   .services-card h3{
     font-size: 1.3em;
@@ -1679,6 +1688,12 @@ footer .access-btn{
     width: 85%;
     font-size: .7em;
     padding: 10px;
+   }
+   .services-title h3{
+    font-size: 1.5em;
+   }
+   .services-title p{
+    padding: 5px;
    }
   .footer-header h2{
     font-size: 1.5em;
